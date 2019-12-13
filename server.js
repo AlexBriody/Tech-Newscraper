@@ -27,11 +27,19 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Connect to the Mongo DB
-mongoose.connect("mongodb://localhost/TechNewsArticles&Notes", { useNewUrlParser: true });
+// mongoose.connect("mongodb://localhost/TechNewsArticles&Notes", { useNewUrlParser: true });
 
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://user:password1@ds253398.mlab.com:53398/heroku_cksdrpc0";
+// var MONGODB_URI = process.env.MONGODB_URI || "mongodb://user:password1@ds253398.mlab.com:53398/heroku_cksdrpc0";
 
-mongoose.connect(MONGODB_URI);
+// mongoose.connect(MONGODB_URI);
+
+mongoose.connect(
+  process.env.MONGODB_URI || "mongodb://user:password1@ds253398.mlab.com:53398/heroku_cksdrpc0",
+  {
+    useMongoClient: true
+  }
+
+)
 
 // Routes
 
