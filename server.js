@@ -29,19 +29,19 @@ app.use(express.static("public"));
 // Connect to the Mongo DB
 // mongoose.connect("mongodb://localhost/TechNewsArticles&Notes", { useNewUrlParser: true });
 
-// var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/TechNewsArticles&Notes";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
 
-// mongoose.connect(MONGODB_URI);
+mongoose.connect(MONGODB_URI);
 
 //Below is from the youtube video
-mongoose.Promise = global.Promise;
-mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://user:password1@ds353358.mlab.com:53358/heroku_n61jbr5b",
-  {
-    useMongoClient: true
-  }
+// mongoose.Promise = global.Promise;
+// mongoose.connect(
+//   process.env.MONGODB_URI || "mongodb://user:password1@ds353358.mlab.com:53358/heroku_n61jbr5b",
+//   {
+//     useMongoClient: true
+//   }
 
-);
+// );
 
 // Routes
 
