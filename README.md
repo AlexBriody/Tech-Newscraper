@@ -12,7 +12,7 @@ An app that that gathers technology headlines and links from Techmeme.com, and l
 
 To help users view the latest tech news and share their comments on them.
 
-## Built With
+## Built With 
 
 * jQuery
 * Javascript
@@ -25,4 +25,5 @@ To help users view the latest tech news and share their comments on them.
 * Mongodb
 * Heroku
 
-
+## Heroku Deployment
+The app is deployed on Heroku:     https://peaceful-crag-10293.herokuapp.com/
